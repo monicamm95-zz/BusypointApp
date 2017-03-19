@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="styles.css">
+ <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+		<h1>Alerts</h1>
+		<a href="">
+			<img class="searchicon" src="img/search-small.png">
+		</a>
+	</div>
+
+	<div class="bpalert">
+		<div class="alertext">
+		<h3>Chainsaw</h3>
+		<p>Notify when wait exceeds 15 mins</p>
+		<p>Active until 10:45 pm</p>
+	</div>
+		<div class="material-switch enabled">
+  			<div class="guide"></div>
+  			<div class="toggle"></div>
+		</div>
+	</div>
+
+	<div class="bpalert">
+		<h3>Kinkaku</h3>
+		<p>Notify when wait is less than 30 mins</p>
+		<p>Active for 1 hour</p>
+		<div class="material-switch">
+  			<div class="guide"></div>
+  			<div class="toggle"></div>
+		</div>
+	</div>
+	<div class="row bottom">
+	<div class="row navigation catnav">
+			<a href="home.html">
+				<img src="img/home-black.png">
+				<h4>HOME</h4>
+			</a>
+			<a href="saved.html">
+				<img src="img/saved-main.png">
+				<h4>SAVED</h4>
+			</a>
+			<a href="categories.html">
+				<img src="img/category-main.png">
+				<h4>CATEGORIES</h4>
+			</a>
+			<a href="alerts.html">
+				<img src="img/alert-green.png">
+				<h4 class="current">ALERTS</h4>
+			</a>
+			<a href="account.html">
+				<img src="img/account-main.png">
+				<h4>ACCOUNT</h4>
+			</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript"> //switch
+$('.material-switch').on('click tap', function(){
+  $(this).toggleClass('enabled');
+})
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="styles.css">
+ <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+ <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="flexsliderhome.css" type="text/css" media="screen" />
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+		<a href="javascript:history.back()" class="back">
+			<img src="img/back.png">
+		</a>
+		<h1>Restaurants</h1>
+		<a href="">
+			<img class="searchicon" src="img/search-small.png">
+		</a>
+	</div>
+
+	<div class="row saved">
+		<a href="saved.html">
+			<p class="seeall">SEE ALL</p>
+		</a>
+		<h3>Your Saved Restaurants</h3>
+		
+		<section class="slider">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+            <a href="business.html">
+            	<img src="img/chainsaw.png"/>
+            	<p>Chainsaw</p>
+				<h5>15 min wait</h5>
+			</a>
+            </li>
+            <li>
+            <a href="business.html">
+            	<img src="img/chainsaw.png"/>
+            	<p>Chainsaw</p>
+				<h5>15 min wait</h5>
+			</a>
+            </li>
+            <li>
+            <a href="business.html">
+            	<img src="img/chainsaw.png"/>
+            	<p>Chainsaw</p>
+				<h5>15 min wait</h5>
+			</a>
+            </li>
+            <li>
+            <a href="business.html">
+            	<img src="img/chainsaw.png"/>
+            	<p>Chainsaw</p>
+				<h5>15 min wait</h5>
+			</a>
+            </li>
+            <li>
+            <a href="business.html">
+            	<img src="img/chainsaw.png"/>
+            	<p>Chainsaw</p>
+				<h5>15 min wait</h5>
+			</a>
+            </li>          
+          </ul>
+        </div>
+      </section>
+	</div>
+
+	<div class="venuelist row catlist">
+		<a href="business.html">
+		<div class="venue">
+			<img src="img/beertown.png">
+			<div class="venueinfo">
+				<h5>500m</h5>
+				<p>Beertown</p>
+				<p>5 min wait</p>
+				<div class="ratings">
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star-o" aria-hidden="true"></i>
+					<p>2 ratings</p>
+				</div>
+				<p>$$, craft beer, Canadian</p>
+			</div>
+		</div>
+		</a>
+
+		<a href="business.html">
+		<div class="venue">
+			<img src="img/beertown.png">
+			<div class="venueinfo">
+				<h5>500m</h5>
+				<p>Beertown</p>
+				<p>5 min wait</p>
+				<div class="ratings">
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star-o" aria-hidden="true"></i>
+					<p>2 ratings</p>
+				</div>
+				<p>$$, craft beer, Canadian</p>
+			</div>
+		</div>
+		</a>
+	</div>
+
+	<div class="row bottom">
+	<div class="row navigation catnav">
+			<a href="home.html">
+				<img src="img/home-black.png">
+				<h4>HOME</h4>
+			</a>
+			<a href="saved.html">
+				<img src="img/saved-main.png">
+				<h4>SAVED</h4>
+			</a>
+			<a href="categories.html">
+				<img src="img/categories-green.png">
+				<h4 class="current">CATEGORIES</h4>
+			</a>
+			<a href="alerts.html">
+				<img src="img/alert-main.png">
+				<h4>ALERTS</h4>
+			</a>
+			<a href="account.html">
+				<img src="img/account-main.png">
+				<h4>ACCOUNT</h4>
+			</a>
+		</div>
+	</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+    <!-- FlexSlider -->
+  <script defer src="jquery.flexslider-min.js"></script>
+
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 87,
+        itemMargin: 7,
+        pausePlay: false,
+        slideshow: false,
+        touch: true,
+        controlNav: false,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
