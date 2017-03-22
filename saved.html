@@ -8,7 +8,6 @@
  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-
 <body>
 <div class="container">
 	<div class="header">
@@ -22,45 +21,27 @@
 	</div>
 
 	<div class="venuelist row">
+		<div id="beertownSave" style='visibility: hidden'>
 		<a href="business.html">
-		<div class="venue">
-			<img src="img/beertown.png">
-			<div class="venueinfo">
-				<h5>500m</h5>
-				<p>Beertown</p>
-				<p>5 min wait</p>
-				<div class="ratings">
-					<i class="fa fa-star" aria-hidden="true"></i>
-					<i class="fa fa-star" aria-hidden="true"></i>
-					<i class="fa fa-star" aria-hidden="true"></i>
-					<i class="fa fa-star" aria-hidden="true"></i>
-					<i class="fa fa-star-o" aria-hidden="true"></i>
-					<p>2 ratings</p>
+			<div class="venue">
+				<img src="img/beertown.png">
+				<div class="venueinfo">
+					<h5>500m</h5>
+					<p>Beertown</p>
+					<p>5 min wait</p>
+					<div class="ratings">
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star-o" aria-hidden="true"></i>
+						<p>2 ratings</p>
+					</div>
+					<p>$$, craft beer, Canadian</p>
 				</div>
-				<p>$$, craft beer, Canadian</p>
 			</div>
+			</a>
 		</div>
-		</a>
-
-		<a href="business.html">
-		<div class="venue">
-			<img src="img/beertown.png">
-			<div class="venueinfo">
-				<h5>500m</h5>
-				<p>Beertown</p>
-				<p>5 min wait</p>
-				<div class="ratings">
-					<i class="fa fa-star" aria-hidden="true"></i>
-					<i class="fa fa-star" aria-hidden="true"></i>
-					<i class="fa fa-star" aria-hidden="true"></i>
-					<i class="fa fa-star" aria-hidden="true"></i>
-					<i class="fa fa-star-o" aria-hidden="true"></i>
-					<p>2 ratings</p>
-				</div>
-				<p>$$, craft beer, Canadian</p>
-			</div>
-		</div>
-		</a>
 	</div>
 
 	<div class="row bottom">
@@ -89,3 +70,8 @@
 	</div>
 </div>
 </body>
+<script>
+	if (localStorage.getItem('isSaved') === 'true') {
+		document.getElementById('beertownSave').style.visibility = "visible"
+	}
+</script>

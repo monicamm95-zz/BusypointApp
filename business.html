@@ -9,7 +9,11 @@
  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
  <link rel="stylesheet" href="flexsliderhome.css" type="text/css" media="screen" />
 </head>
-
+<script>
+function saveRestaurant() {
+	localStorage.setItem('isSaved', true);
+}
+</script>
 <body>
 <div class="container business">
 	<div class="header">
@@ -17,7 +21,7 @@
 			<img src="img/back.png">
 		</a>
 		<h1>Beertown</h1>
-		<a href="">
+		<a href="" onclick="saveRestaurant()">
 			<img class="saveicon" src="img/heartunfilled.png">
 		</a>
 		<a href="">
