@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+ <link rel="stylesheet" type="text/css" href="static/styles.css">
+ <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+		<a href="javascript:history.back()" class="back exit">
+			<img src="static/img/exit.png">
+		</a>
+		<h1>Set New Alert</h1>
+		<a href="javascript:history.back()" class="searchicon" id="savealert">SAVE</a>
+	</div>
+
+	<div class="setalert">
+		<h3>Receive push notifications about Beertown to:</h3>
+		<form>
+		<div class="checks">
+			  
+    	<input type="checkbox" id="test1" />
+    	<label for="test1">Receive promotions</label>
+  		<br>
+  		<input type="checkbox" id="test2" />
+    	<label for="test2">Alert me when the wait time is</label>
+
+		</div>
+			<div class="segmented">
+    			<label class="checked"><input type="radio" name="segmented" checked /> Less Than</label>
+    			<label><input type="radio" name="segmented" /> Greater Than</label>
+  			</div>
+
+        <div id="ddone">
+          <select>
+            <option value="1"  selected>15</option>
+            <option value="2">Option 1</option>
+            <option value="3">Option 2</option>
+            <option value="4">Option 3</option>
+          </select>
+          <p>minutes.</p>
+        </div>
+
+        <div id="ddtwo">
+          <p>Keep the alert active for</p>
+          <select>
+            <option value="" selected>15</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+        </div>
+		</form>
+	</div>
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script type="text/javascript"> //segmented control
+	$(document).ready(function(){
+    $(".segmented label input[type=radio]").each(function(){
+        $(this).on("change", function(){
+            if($(this).is(":checked")){
+               $(this).parent().siblings().each(function(){
+                    $(this).removeClass("checked");
+                });
+                $(this).parent().addClass("checked");
+            }
+        });
+    });
+});
+</script>
+
+<script type="text/javascript"> //dropdowns
+	$(document).ready(function(){
+	 $(document).ready(function() {
+    $('select').material_select();
+  });
+      
+})
+</script>
+</body>
+</html>

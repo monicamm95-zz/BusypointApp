@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="static/styles.css">
+ <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+ <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+ <script type="text/javascript" charset="utf-8">
+		var wait_time = "—";
+		window.onload = function load(){
+			document.getElementById("test").innerHTML = wait_time;
+		};
+    	var socket = io.connect('http://' + document.domain + ':' + location.port);
+            socket.on('connect', function() {
+                 console.log('connected')
+                 socket.emit('connected');
+            });
+            socket.on('message', function(data) {
+                 console.log(data);
+                 document.getElementById("wait").innerHTML = data.waittime;
+                 document.getElementById("waittime").innerHTML = data.waittime;
+            });
+ </script>
+</head>
+<body>
+<div class="container">
+	<div class="header">
+		<a href="filter.html">
+			<img src="">
+		</a>
+		<h1>Saved</h1>
+		<a href="">
+			<img class="searchicon" src="static/img/search-small.png">
+		</a>
+	</div>
+
+	<a href="Engineering5">
+		<div class="venue">
+			<img src="static/img/e5.jpg">
+			<div class="venueinfo">
+				<h5>0m</h5>
+				<p>Engineering</p>
+				<p>1 minute</p>
+				<div class="ratings">
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star-o" aria-hidden="true"></i>
+					<p>2 ratings</p>
+				</div>
+				<p>$$, craft beer, Canadian</p>
+			</div>
+		</div>
+	</a>
+
+	<div class="venuelist row">
+		<a href="Bauer%20Kitchen">
+		<div class="venue">
+			<img src="static/img/bauer.jpg">
+			<div class="venueinfo">
+				<h5>3km</h5>
+				<p>Bauer Kitchen</p>
+				<p>5 minutes</p>
+				<div class="ratings">
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="false"></i>
+					<i class="fa fa-star-o" aria-hidden="false"></i>
+					<p>14 ratings</p>
+				</div>
+				<p>$$, craft beer, Canadian</p>
+			</div>
+		</div>
+		</a>
+
+		<a href="Taco%20Farm">
+		<div class="venue">
+			<img src="static/img/taco.jpg">
+			<div class="venueinfo">
+				<h5>2.3km</h5>
+				<p>Taco Farm</p>
+				<p>5 minutes</p>
+				<div class="ratings">
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star-o" aria-hidden="false"></i>
+					<p>23 ratings</p>
+				</div>
+				<p>$$, craft beer, Canadian</p>
+			</div>
+		</div>
+		</a>
+		</div>
+	</div>
+
+	<div class="row bottom">
+	<div class="row navigation catnav">
+			<a href="home.html">
+				<img src="static/img/home-black.png">
+				<h4>HOME</h4>
+			</a>
+			<a href="saved.html">
+				<img src="static/img/saved-green.png">
+				<h4 class="current">SAVED</h4>
+			</a>
+			<a href="categories.html">
+				<img src="static/img/category-main.png">
+				<h4>CATEGORIES</h4>
+			</a>
+			<a href="alerts.html">
+				<img src="static/img/alert-main.png">
+				<h4>ALERTS</h4>
+			</a>
+			<a href="account.html">
+				<img src="static/img/account-main.png">
+				<h4>ACCOUNT</h4>
+			</a>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+	if (localStorage.getItem('isSaved') === 'true') {
+		document.getElementById('beertownSave').style.visibility = "visible"
+	}
+</script>

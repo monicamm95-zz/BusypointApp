@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="styles.css">
+ <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="flexsliderhome.css" type="text/css" media="screen" />
+
+ 
+</head>
+
+<body>
+<section class="slider">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="img/chainsaw.png" alt="AEPi rush"/>
+              <p>Chainsaw</p>
+            </li>
+            <li>
+              <img src="img/chainsaw.png" alt="Pike rush"/>
+              <p>Chainsaw</p>
+            </li>
+            <li>
+              <img src="img/chainsaw.png" alt="Sigma Chi group photo"/>
+            </li>
+            <li>
+              <img src="img/chainsaw.png" alt="Zeta Psi chapter photo"/>
+            </li>
+            <li>
+              <img src="img/chainsaw.png" alt="Pike chapter photo"/>
+            </li>          
+          </ul>
+        </div>
+      </section>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+    <!-- FlexSlider -->
+  <script defer src="jquery.flexslider-min.js"></script>
+
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 90,
+        itemMargin: 10,
+        pausePlay: false,
+        slideshow: false,
+        touch: true,
+        controlNav: false,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

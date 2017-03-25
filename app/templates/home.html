@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="static/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+<link rel="stylesheet" href="static/flexsliderhome.css" type="text/css" media="screen" />
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+		var wait_time = "—";
+		window.onload = function load(){
+			document.getElementById("test").innerHTML = wait_time;
+		};
+    	var socket = io.connect('http://' + document.domain + ':' + location.port);
+            socket.on('connect', function() {
+                 console.log('connected')
+                 socket.emit('connected');
+            });
+
+            socket.on('message', function(data) {
+                 console.log(data);
+                 document.getElementById("wait").innerHTML = data.waittime;
+            });
+</script>
+</head>
+
+<body>
+<div class="container">
+	<div class="row search">
+		<form>
+			<img id="searchhome" src="static/img/search-main.png">
+			<h2>Where do you want to go?</h2>
+			<div class="entry">
+				<input class="searchbar" type="text" name="search" placeholder="Search">
+				<a href="searchresults.html">
+					<img src="static/img/go-main.png" alt="Search">
+				</a>
+			</div>
+		</form>
+	</div>
+	<div class="bottom">
+	<div class="row saved">
+		<a class="seeall" href="saved.html">
+			SEE ALL
+		</a>
+		<h3>Your Saved Places</h3>
+
+		<section class="slider">
+        <div class="flexslider" style="display: inline-block; padding-right: 3px;">
+          <div class="slides">
+            <div id="beertownSave">
+            <a href="Engineering5">
+            	<img src="static/img/e5.jpg"/>
+            	<p>Engineering</p>
+				<h5 id="wait"></h5>
+			</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flexslider" style="display: inline-block; padding-right: 3px;">
+          <div class="slides">
+            <div id="beertownSave2">
+            <a href="Bauer%20Kitchen">
+            	<img src="static/img/bauer.jpg"/>
+            	<p>Bauer</p>
+				<h5>7 minutes</h5>
+			</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flexslider" style="display: inline-block; padding-right: 3px;">
+          <div class="slides">
+            <div id="beertownSave3">
+            <a href="Taco%20Farm">
+            	<img src="static/img/taco.jpg"/>
+            	<p>Taco Farm</p>
+				<h5>2 minutes</h5>
+			</a>
+            </div>
+          </div>
+        </div>
+      </section>
+	</div>
+	<div class="row categories">
+		<h3>I'm looking for...</h3>
+		<div class="catrow">
+			<a href="restaurants.html">
+				<img src="static/img/restaurant-main.png">
+				<h6>Restaurants</h6>
+			</a>
+			<a href="fastfood.html">
+				<img src="static/img/fastfood-main.png">
+				<h6>Fast Food</h6>
+			</a>
+			<a href="coffee.html">
+				<img src="static/img/coffee-main.png">
+				<h6>Coffee</h6>
+			</a>
+			<a href="nightclubs.html">
+				<img src="static/img/nightclub-main.png">
+				<h6>Nightclubs</h6>
+			</a>
+		</div>
+		<div class="catrow">
+			<a href="bars.html">
+				<img src="static/img/bars-main.png">
+				<h6>Bars</h6>
+			</a>
+			<a href="museums.html">
+				<img src="static/img/museum-main.png">
+				<h6>Museums</h6>
+			</a>
+			<a href="attractions.html">
+				<img src="static/img/attraction-main.png">
+				<h6>Attractions</h6>
+			</a>
+			<a href="categories.html">
+				<img src="static/img/seemore.png">
+				<h6>See More</h6>
+			</a>
+		</div>
+		<div class="row navigation">
+			<a href="home.html">
+				<img src="static/img/home-green.png">
+				<h4 class="current">HOME</h4>
+			</a>
+			<a href="saved.html">
+				<img src="static/img/saved-main.png">
+				<h4>SAVED</h4>
+			</a>
+			<a href="categories.html">
+				<img src="static/img/category-main.png">
+				<h4>CATEGORIES</h4>
+			</a>
+			<a href="alerts.html">
+				<img src="static/img/alert-main.png">
+				<h4>ALERTS</h4>
+			</a>
+			<a href="account.html">
+				<img src="static/img/account-main.png">
+				<h4>ACCOUNT</h4>
+			</a>
+		</div>
+	</div>
+</div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+    <!-- FlexSlider -->
+  <script defer src="jquery.flexslider-min.js"></script>
+
+  <script type="text/javascript"> //carousel
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 87,
+        itemMargin: 7,
+        pausePlay: false,
+        slideshow: false,
+        touch: true,
+        controlNav: false,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+</body>
+<script>
+	if (localStorage.getItem('isSaved') === 'true') {
+		document.getElementById('beertownSave').style.visibility = "visible"
+	}
+</script>
+</html>

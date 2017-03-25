@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="static/styles.css">
+ <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+		<h1>Alerts</h1>
+		<a href="">
+			<img class="searchicon" src="static/img/search-small.png">
+		</a>
+	</div>
+
+	<div class="bpalert">
+		<div class="alertext" id="switch1text" style="opacity: 1;">
+		<h3>Chainsaw</h3>
+		<p>Notify when wait exceeds 15 mins</p>
+		<p>Active until 10:45 pm</p>
+	</div>
+		<div class="material-switch enabled" id="switch1" onclick="changeOpacity1()">
+  			<div class="guide"></div>
+  			<div class="toggle"></div>
+		</div>
+	</div>
+
+	<div class="bpalert">
+		<div class="alertext" id="switch2text" style="opacity: 0.54;">
+		<h3>Kinkaku</h3>
+		<p>Notify when wait is less than 30 mins</p>
+		<p>Active for 1 hour</p>
+		<div class="material-switch" id='switch2' onclick="changeOpacity2()">
+  			<div class="guide"></div>
+  			<div class="toggle"></div>
+		</div>
+	</div>
+	</div>
+	<div class="row bottom">
+	<div class="row navigation catnav">
+			<a href="home.html">
+				<img src="static/img/home-black.png">
+				<h4>HOME</h4>
+			</a>
+			<a href="saved.html">
+				<img src="static/img/saved-main.png">
+				<h4>SAVED</h4>
+			</a>
+			<a href="categories.html">
+				<img src="static/img/category-main.png">
+				<h4>CATEGORIES</h4>
+			</a>
+			<a href="alerts.html">
+				<img src="static/img/alert-green.png">
+				<h4 class="current">ALERTS</h4>
+			</a>
+			<a href="account.html">
+				<img src="static/img/account-main.png">
+				<h4>ACCOUNT</h4>
+			</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript"> //switch
+$('.material-switch').on('click tap', function(){
+  $(this).toggleClass('enabled');
+})
+function changeOpacity1() {
+	if (document.getElementById("switch1text").style.opacity == '1') {
+		document.getElementById("switch1text").style.opacity = '0.54';
+	} else {
+		document.getElementById("switch1text").style.opacity = '1';
+	}
+}
+function changeOpacity2(){
+	if (document.getElementById("switch2text").style.opacity == '1') {
+		document.getElementById("switch2text").style.opacity = '0.54';
+	} else {
+		document.getElementById("switch2text").style.opacity = '1';
+	}
+}
+</script>
+
+
+
+</body>
+</html>
