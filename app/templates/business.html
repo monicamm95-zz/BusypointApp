@@ -13,6 +13,8 @@
 function saveRestaurant() {
 	localStorage.setItem('isSaved', true);
 }
+
+
 </script>
 <body>
 <div class="container business">
@@ -21,9 +23,9 @@ function saveRestaurant() {
 			<img src="static/img/back.png">
 		</a>
 		<h1>{{name}}</h1>
-		<a href="" onclick="saveRestaurant()">
-			<img class="saveicon" src="static/img/heartunfilled.png">
-		</a>
+
+		<img class="saveicon" id="saveHeart" onclick="changeImage()" src="static/img/{{heart}}">
+
 		<a href="">
 			<img class="searchicon" src="static/img/search-small.png">
 		</a>
@@ -81,8 +83,6 @@ function saveRestaurant() {
 			<img src="static/img/restaurants/{{name}}/main96x96.jpg">
 			<img src="static/img/restaurants/{{name}}/extra96x96.jpg">
 			<img src="static/img/restaurants/{{name}}/extra96x96 2.jpg">
-			<img src="static/img/restaurants/{{name}}/extra96x96 3.jpg">
-			<img src="static/img/restaurants/{{name}}/extra96x96 4.jpg">
 		</div>
 	</div>
 
@@ -127,42 +127,28 @@ function saveRestaurant() {
 		<h3>Similar Places</h3>
 		<section class="slider">
         <div class="flexslider">
-          <div class="slides">
-            <div style="display: inline-block; padding-right: 7px;">
+          <ul class="slides">
+            <div style="display: inline-block; padding-right: 3px; border: none;">
             <a href="Bauer Kitchen">
             	<img src="static/img/bauer.jpg"/>
             	<p>Bauer</p>
 				<h5>15 min wait</h5>
 			</a>
             </div>
-            <div style="display: inline-block; padding-right: 7px;">
+            <div style="display: inline-block; padding-right: 3px; border: none;">
             <a href="Charcoal%20Steak%20House">
             	<img src="static/img/charcoal.jpg"/>
             	<p>Charcoal</p>
 				<h5>12 min wait</h5>
 			</a>
             </div>
-            <div style="display: inline-block; padding-right: 7px;">
+            <div style="display: inline-block; padding-right: 3px; border: none;">
             <a href="The%20Yeti">
             	<img src="static/img/yeti.jpg"/>
             	<p>The Yeti</p>
 				<h5>23 min wait</h5>
 			</a>
             </div>
-            <div style="display: inline-block; padding-right: 7px;">
-            <a href="Kinkaku">
-            	<img src="static/img/kinkaku.jpg"/>
-            	<p>Kinkaku</p>
-				<h5>1 min wait</h5>
-			</a>
-            </div>
-            <div style="display: inline-block; padding-right: 7px;">
-            <a href="Bao%20Sandwich">
-            	<img src="static/img/bao.jpg"/>
-            	<p>Bao</p>
-				<h5>25 min wait</h5>
-			</a>
-            </div> 
           </div>
         </div>
       </section>
@@ -218,6 +204,23 @@ function saveRestaurant() {
         }
       });
     });
+    function changeImage() {
+		if (heart == true) {
+			document.getElementById("saveHeart").src = "static/img/heartfilled.png";
+			heart = false
+			
+		} else {
+			document.getElementById("saveHeart").src = "static/img/heartunfilled.png";
+			heart = true
+			
+		}
+	};
+
+	var heart = false;
+	if (document.getElementById("saveHeart").src == "static/img/heartfilled.png") {
+		heart = true
+	}
+
   </script>
 </body>
 </html>

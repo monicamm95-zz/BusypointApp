@@ -73,7 +73,7 @@ def category():
 
 @app.route('/271 West')
 def restaurant():
-    return render_template('business.html',name="271 West")
+    return render_template('business.html',name="271 West", heart="heartunfilled.png")
 
 @app.route('/restaurants.html')
 def restaurant111():
@@ -105,43 +105,43 @@ def page6():
 
 @app.route('/Bao Sandwich')
 def page7():
-    return render_template('business.html',name="Bao Sandwich")
+    return render_template('business.html',name="Bao Sandwich", heart="heartunfilled.png")
 
 @app.route('/Bauer Kitchen')
 def restaurant3():
-    return render_template('business.html',name="Bauer Kitchen")
+    return render_template('business.html',name="Bauer Kitchen", heart="heartfilled.png")
 
 @app.route('/Bhimas Warung')
 def restaurant4():
-    return render_template('business.html',name="Bhimas Warung")
+    return render_template('business.html',name="Bhimas Warung", heart="heartunfilled.png")
 
 @app.route('/Charcoal Steak House')
 def restaurant5():
-    return render_template('business.html',name="Charcoal Steak House")
+    return render_template('business.html',name="Charcoal Steak House", heart="heartunfilled.png")
 
 @app.route('/Fork and Cork Grill')
 def restaurant6():
-    return render_template('business.html',name="Fork and Cork Grill")
+    return render_template('business.html',name="Fork and Cork Grill", heart="heartunfilled.png")
 
 @app.route('/Ken Sushi')
 def restaurant7():
-    return render_template('business.html',name="Ken Sushi")
+    return render_template('business.html',name="Ken Sushi", heart="heartunfilled.png")
 
 @app.route('/Chainsaw')
 def restaurant8():
-    return render_template('business.html',name="Chainsaw")
+    return render_template('business.html',name="Chainsaw", heart="heartunfilled.png")
 
 @app.route('/The Yeti')
 def restaurant9():
-    return render_template('business.html',name="The Yeti")
+    return render_template('business.html',name="The Yeti", heart="heartunfilled.png")
 
 @app.route('/Kinkaku')
 def restaurant10():
-    return render_template('business.html',name="Kinkaku")
+    return render_template('business.html',name="Kinkaku", heart="heartunfilled.png")
 
 @app.route('/Taco Farm')
 def restaurant11():
-    return render_template('business.html',name="Taco Farm")
+    return render_template('business.html',name="Taco Farm", heart="heartfilled.png")
 		
 if __name__ == '__main__':
 	socketio.run(app)

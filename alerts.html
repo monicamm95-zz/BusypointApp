@@ -19,25 +19,27 @@
 	</div>
 
 	<div class="bpalert">
-		<div class="alertext">
+		<div class="alertext" id="switch1text" style="opacity: 1;">
 		<h3>Chainsaw</h3>
 		<p>Notify when wait exceeds 15 mins</p>
 		<p>Active until 10:45 pm</p>
 	</div>
-		<div class="material-switch enabled">
+		<div class="material-switch enabled" id="switch1" onclick="changeOpacity1()">
   			<div class="guide"></div>
   			<div class="toggle"></div>
 		</div>
 	</div>
 
 	<div class="bpalert">
+		<div class="alertext" id="switch2text" style="opacity: 0.54;">
 		<h3>Kinkaku</h3>
 		<p>Notify when wait is less than 30 mins</p>
 		<p>Active for 1 hour</p>
-		<div class="material-switch">
+		<div class="material-switch" id='switch2' onclick="changeOpacity2()">
   			<div class="guide"></div>
   			<div class="toggle"></div>
 		</div>
+	</div>
 	</div>
 	<div class="row bottom">
 	<div class="row navigation catnav">
@@ -69,6 +71,20 @@
 $('.material-switch').on('click tap', function(){
   $(this).toggleClass('enabled');
 })
+function changeOpacity1() {
+	if (document.getElementById("switch1text").style.opacity == '1') {
+		document.getElementById("switch1text").style.opacity = '0.54';
+	} else {
+		document.getElementById("switch1text").style.opacity = '1';
+	}
+}
+function changeOpacity2(){
+	if (document.getElementById("switch2text").style.opacity == '1') {
+		document.getElementById("switch2text").style.opacity = '0.54';
+	} else {
+		document.getElementById("switch2text").style.opacity = '1';
+	}
+}
 </script>
 
 

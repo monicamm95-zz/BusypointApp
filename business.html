@@ -9,9 +9,14 @@
  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
  <link rel="stylesheet" href="flexsliderhome.css" type="text/css" media="screen" />
 </head>
-<script>
+  <script>
 function saveRestaurant() {
 	localStorage.setItem('isSaved', true);
+
+}
+
+function changeImage() {
+    document.getElementById("saveHeart").src = "img/heartfilled.png";
 }
 </script>
 <body>
@@ -21,8 +26,8 @@ function saveRestaurant() {
 			<img src="img/back.png">
 		</a>
 		<h1>Beertown</h1>
-		<a href="" onclick="saveRestaurant()">
-			<img class="saveicon" src="img/heartunfilled.png">
+		<a href="" onclick="changeImage(); saveRestaurant()">
+			<img class="saveicon" id="saveHeart" src="img/heartunfilled.png">
 		</a>
 		<a href="">
 			<img class="searchicon" src="img/search-small.png">
@@ -197,24 +202,25 @@ function saveRestaurant() {
   <script defer src="jquery.flexslider-min.js"></script>
 
   <script type="text/javascript">
-    $(function(){
-      SyntaxHighlighter.all();
-    });
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        animationLoop: false,
-        itemWidth: 87,
-        itemMargin: 7,
-        pausePlay: false,
-        slideshow: false,
-        touch: true,
-        controlNav: false,
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
+    // $(function(){
+    //   SyntaxHighlighter.all();
+    // });
+    // $(window).load(function(){
+    //   $('.flexslider').flexslider({
+    //     animation: "slide",
+    //     animationLoop: false,
+    //     itemWidth: 87,
+    //     itemMargin: 7,
+    //     pausePlay: false,
+    //     slideshow: false,
+    //     touch: true,
+    //     controlNav: false,
+    //     start: function(slider){
+    //       $('body').removeClass('loading');
+    //     }
+    //   });
+    // });
   </script>
+
 </body>
 </html>
